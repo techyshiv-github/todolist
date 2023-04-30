@@ -2,6 +2,7 @@ let itemNo = 0;
 document.body.onload = function () {
   document.getElementById("clearALL").style.visibility = "hidden";
 };
+
 document.getElementById("input-btn").addEventListener("click", function () {
   document.getElementById("clearALL").style.visibility = "visible";
   itemNo++;
@@ -23,7 +24,7 @@ document.getElementById("input-btn").addEventListener("click", function () {
   const deleteBtn = document.getElementsByClassName("delete-btn");
   for (const button of deleteBtn) {
     button.addEventListener("click", function (event) {
-      event.target.parentNode.parentNode.style.display = "none";
+      event.target.parentNode.parentNode.innerHTML = "";
     });
   }
   const doneBtn = document.getElementsByClassName("done-btn");
